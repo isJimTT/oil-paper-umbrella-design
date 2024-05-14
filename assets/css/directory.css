@@ -1,0 +1,82 @@
+.main {
+  width: 100vw;
+  height: calc(100vh - 50px);
+  background-image: url("../img/directory/star_bg.png");
+  border-top: 25px solid #818181;
+  border-bottom: 25px solid #818181;
+  z-index: 998;
+}
+
+/* 黑屏渐显 */
+.overlay {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  z-index: 999;
+  animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* 背景遮罩 */
+.base-bg {
+  position: fixed;
+  z-index: 999;
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 返回首页 */
+.back-umbrella {
+  margin-left: 30px;
+  margin-top: -10px;
+  z-index: 997;
+  cursor: pointer;
+}
+
+.back-umbrella img {
+  position: fixed;
+  z-index: 999;
+}
+
+/* 目录按钮 */
+.directory {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  z-index: 998;
+}
+
+.directory img {
+  width: 13vw;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* 眼睛 */
+.eyes {
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  top: 0;
+}
+.eyes-inner {
+  position: absolute;
+  width: 20vw;
+  left: 40vw;
+  top: 17vh;
+}
