@@ -21,6 +21,7 @@
   opacity: 0;
   z-index: 999;
   animation: fadeIn 3s forwards;
+  pointer-events: none;
 }
 
 @keyframes fadeIn {
@@ -63,7 +64,7 @@
 
 .title img:hover {
   cursor: pointer;
-  scale: 1.03;
+  scale: 1.05;
 }
 
 .title .title-top {
@@ -78,12 +79,41 @@
   width: 10vw;
   top: 33vh;
   left: -4vw;
+  border-radius: 1000px;
+
+  transition: transform 2s ease-in-out;
 }
+
 .umbrella-title-right {
   position: absolute;
   width: 5vw;
   top: 63vh;
   right: -1vw;
+  border-radius: 1000px;
+  transition: transform 2s ease-in-out;
+}
+.shanks-left {
+  animation: animated-border-left 5s infinite;
+}
+.shanks-right {
+  animation: animated-border-right 3s infinite;
+}
+
+@keyframes animated-border-left {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 300px rgba(255, 255, 255, 0);
+  }
+}
+@keyframes animated-border-right {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
+  }
 }
 
 @keyframes titleChange {
