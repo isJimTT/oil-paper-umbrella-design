@@ -34,6 +34,7 @@ body {
   position: fixed;
   top: 1vw;
   left: 1vw;
+  cursor: pointer;
 }
 
 .mountain {

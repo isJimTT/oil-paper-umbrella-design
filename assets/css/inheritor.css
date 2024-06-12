@@ -1,0 +1,29 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/inheritor/bg.png");
+}
+.content {
+  height: 75%;
+  display: flex;
+  padding-top: 15vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content img:nth-child(1) {
+  width: 16vw;
+}
+.content img:nth-child(2) {
+  cursor: pointer;
+  width: 12vw;
+}
+
+.back-btn {
+  position: fixed;
+  top: 2vh;
+  left: 1vw;
+  z-index: 997;
+  cursor: pointer;
+}

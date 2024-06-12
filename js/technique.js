@@ -1,3 +1,9 @@
+const backBtn = document.querySelector(".back");
+
+backBtn.onclick = () => {
+  window.location = "./directory.html";
+};
+
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
   // spaceBetween: 50,

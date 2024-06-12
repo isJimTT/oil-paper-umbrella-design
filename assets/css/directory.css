@@ -16,8 +16,8 @@
   height: 100%;
   background-color: black;
   opacity: 0;
-  z-index: 999;
-  animation: fadeIn 3s forwards;
+  z-index: 99999;
+  animation: fadeIn 1.5s forwards;
 }
 
 @keyframes fadeIn {
@@ -26,6 +26,16 @@
   }
   to {
     opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -54,17 +64,86 @@
 /* 目录按钮 */
 .directory {
   width: 100vw;
-  height: 80vh;
+  height: 62vh;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  z-index: 998;
+  z-index: 9999;
 }
 
-.directory img {
+.directory div {
+  display: flex;
+  position: relative;
+  flex-direction: column;
   width: 13vw;
+  height: 15vh;
   cursor: pointer;
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+.directory div img:nth-child(1) {
+  width: 5vw;
+}
+.directory div img:nth-child(2) {
+  width: 12vw;
+}
+
+.mid-line {
+  position: absolute;
+  height: 4vh;
+  top: 6vh;
+  left: -1vh;
+  width: 100%;
+  border-radius: 5vh;
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.fail-img {
+  width: 7.5vh !important;
+}
+
+.directory div:nth-child(2),
+.directory div:nth-child(3) {
+  position: relative;
+  top: 70px;
+}
+
+.button-cloud {
+  position: fixed;
   z-index: 999;
+}
+
+.button-cloud img {
+  position: absolute;
+}
+.button-cloud img:nth-child(1) {
+  width: 40vw;
+  top: 7vh;
+  left: 60vw;
+}
+.button-cloud img:nth-child(2) {
+  width: 40vw;
+  top: -8vh;
+  left: -10vw;
+  z-index: 9999;
+}
+.button-cloud img:nth-child(3) {
+  width: 33vw;
+  top: -5vh;
+  left: 80vw;
+  rotate: 180deg;
+}
+.button-cloud img:nth-child(4) {
+  width: 40vw;
+  top: 5vh;
+  left: 22vw;
+  rotate: 180deg;
+}
+.button-cloud img:nth-child(5) {
+  width: 40vw;
+  left: 4vw;
 }
 
 /* 眼睛 */
@@ -73,6 +152,7 @@
   width: 100vw;
   left: 0;
   top: 0;
+  animation: fadeOut 3s forwards;
 }
 .eyes-inner {
   position: absolute;
