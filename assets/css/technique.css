@@ -24,7 +24,7 @@ body {
   width: 31.8vw;
   position: absolute;
   left: 33.5vw;
-  top: -3vw;
+  top: -3.1vw;
   animation: wordRotate 60s linear infinite;
 }
 
@@ -79,7 +79,7 @@ body {
   width: 10vw;
   position: absolute;
   top: 23vw;
-  left: 45vw;
+  left: 44.5vw;
 }
 
 .process {
@@ -112,11 +112,9 @@ video {
 }
 
 .swiper {
-  width: 80vw;
+  width: 99vw;
   height: 15vw;
-}
-
-.swiper-wrapper {
+  margin-top: 5vw;
 }
 
 .swiper-slide {
@@ -125,6 +123,7 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 3vw;
 }
 
 .swiper-slide img {
@@ -141,7 +140,7 @@ video {
 }
 
 .umbrella {
-  opacity: 0.6;
+  /* opacity: 0.6; */
   width: 99vw;
   /* width: 120vw;
   margin-left: -10.5vw; */
@@ -159,6 +158,10 @@ video {
   position: absolute;
   top: 29vw;
   left: 10.8vw;
+  transition: transform 0.3s ease;
+}
+.long:hover {
+  transform: scale(1.1) translateX(-1.7vw);
 }
 
 .short {
@@ -166,6 +169,10 @@ video {
   position: absolute;
   top: 39vw;
   left: 49.1vw;
+  transition: transform 0.3s ease;
+}
+.short:hover {
+  transform: scale(1.1) translateX(1.7vw);
 }
 
 .jump {
@@ -173,6 +180,10 @@ video {
   position: absolute;
   top: 53vw;
   left: 49vw;
+  transition: transform 0.3s ease;
+}
+.jump:hover {
+  transform: scale(1.1) translateX(1.7vw) translateY(1.4vw);
 }
 
 .bing {
@@ -180,6 +191,10 @@ video {
   position: absolute;
   top: 73vw;
   left: 10.7vw;
+  transition: transform 0.3s ease;
+}
+.bing:hover {
+  transform: scale(1.1) translateX(-1.7vw) translateY(-1.4vw);
 }
 
 .drill {
@@ -187,6 +202,10 @@ video {
   position: absolute;
   top: 117vw;
   left: 49.2vw;
+  transition: transform 0.3s ease;
+}
+.drill:hover {
+  transform: scale(1.1) translateX(1.7vw);
 }
 
 .footer {
@@ -199,6 +218,7 @@ video {
   left: 25vw;
   bottom: 2vw;
   position: relative;
+  animation: wordRotate 30s linear infinite;
 }
 
 .fc1 {
@@ -281,7 +301,14 @@ video {
   position: fixed;
   bottom: 0;
   width: 99vw;
-  height: 10vw;
+  height: 7vw;
   background: linear-gradient(to top, black, transparent);
   transition: bottom 2s;
+}
+
+.down {
+  position: absolute;
+  width: 4vw;
+  left: 48vw;
+  bottom: 2vw;
 }
