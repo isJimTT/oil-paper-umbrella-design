@@ -1,3 +1,15 @@
+createCustomNavbar();
+
+let backBtn = document.querySelector(".back-umbrella img");
+
+backBtn.onclick = () => {
+  window.location = "./directory.html";
+};
+
+window.onload = () => {
+  document.body.appendChild(createCustomNavbar());
+};
+
 var swiper = new Swiper(".mySwiper", {
   direction: "vertical",
   slidesPerView: 1,

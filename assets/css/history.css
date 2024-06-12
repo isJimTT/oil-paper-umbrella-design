@@ -22,6 +22,7 @@
   opacity: 0;
   z-index: 99999;
   animation: fadeIn 3s forwards;
+  pointer-events: none;
 }
 
 @keyframes fadeIn {
@@ -51,8 +52,8 @@
 
 .logo img {
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom: 25px;
+  left: 10px;
   z-index: 99999;
 }
 
@@ -241,6 +242,7 @@
   display: flex;
   flex-direction: column;
   z-index: 9999;
+  pointer-events: none;
 }
 .title img:nth-child(1) {
   position: fixed;

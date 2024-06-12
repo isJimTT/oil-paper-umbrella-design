@@ -9,11 +9,73 @@
   display: none;
 }
 
+/* 黑屏渐显 */
+.overlay {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  z-index: 99999;
+  animation: fadeIn 1.5s forwards;
+  pointer-events: none;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  background-color: #818181;
+  z-index: 99999;
+}
+
+.logo img {
+  position: fixed;
+  bottom: 25px;
+  left: 10px;
+  z-index: 99999;
+}
+
+.slide img {
+  position: fixed;
+  bottom: 3vh;
+  left: 48vw;
+  width: 4vw;
+  z-index: 9999;
+  transition: all 1.5s ease;
+  animation: animated-border 1.5s infinite;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+@keyframes animated-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    transform: translateY(-10px);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    transform: translateY(0px);
+  }
+}
+
 .back-btn {
   position: fixed;
   top: 2vh;
   left: 1vw;
-  z-index: 997;
+  z-index: 99999;
   cursor: pointer;
 }
 
@@ -263,6 +325,10 @@
   100% {
     left: 100%;
   }
+}
+
+.inheritor-lbf {
+  width: 5vh !important;
 }
 
 .right-arr {

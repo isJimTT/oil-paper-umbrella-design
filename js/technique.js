@@ -1,7 +1,22 @@
 const backBtn = document.querySelector(".back");
+const slide = document.querySelector(".slide img");
+
+let timer;
 
 backBtn.onclick = () => {
   window.location = "./directory.html";
+};
+
+window.onload = () => {
+  document.body.appendChild(createCustomNavbar());
+};
+
+window.onwheel = () => {
+  slide.style.opacity = 0;
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    slide.style.opacity = 1;
+  }, 1000);
 };
 
 var swiper = new Swiper(".mySwiper", {

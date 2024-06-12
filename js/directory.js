@@ -49,5 +49,5 @@ directories[2].onclick = () => {
   window.location = "./inheritor-detail.html";
 };
 directories[3].onclick = () => {
-  window.location = "./technique.html";
+  window.location = "./expression.html";
 };

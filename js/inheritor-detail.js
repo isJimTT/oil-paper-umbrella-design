@@ -2,12 +2,26 @@ const backBtn = document.querySelector(".back-btn");
 const textWrap = document.querySelector(".text-wrap");
 const maskText = document.querySelector(".text-wrap .mask-text");
 const rightArr = document.querySelector(".right-arr");
+const slide = document.querySelector(".slide img");
+let timer;
 
 backBtn.onclick = () => {
   window.location = "./directory.html";
 };
 rightArr.onclick = () => {
   window.location = "./inheritor.html";
+};
+
+window.onload = () => {
+  document.body.appendChild(createCustomNavbar());
+};
+
+window.onwheel = () => {
+  slide.style.opacity = 0;
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    slide.style.opacity = 1;
+  }, 1000);
 };
 
 const observer = new IntersectionObserver(
