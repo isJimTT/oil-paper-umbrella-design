@@ -247,6 +247,7 @@
 .title img:nth-child(1) {
   position: fixed;
   width: 50vw;
+  top: 5vh;
   left: 0;
   align-self: self-start;
   transition: all ease 1s;
@@ -254,7 +255,7 @@
 .title img:nth-child(2) {
   position: fixed;
   width: 70vw;
-  top: 20vh;
+  top: 23vh;
   left: 17vw;
   align-self: center;
   transition: all ease 1s;
@@ -263,7 +264,7 @@
   position: fixed;
   width: 50vw;
   left: 50vw;
-  top: 55vh;
+  top: 60vh;
   align-self: self-end;
   transition: all ease 1s;
 }
@@ -359,7 +360,7 @@
 }
 
 .second {
-  height: 300vh;
+  height: 200vh;
   color: #fff;
   background-color: #1e1c1d;
   display: flex;

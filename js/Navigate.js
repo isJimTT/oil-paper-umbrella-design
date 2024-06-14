@@ -22,7 +22,6 @@ function createCustomNavbar() {
       scale: "1",
     },
   ];
-  console.log(currentPath);
 
   switch (currentPath) {
     case "technique.html":
@@ -96,6 +95,15 @@ function createCustomNavbar() {
     }
   };
 
+  // 鼠标移入
+  navbar.addEventListener("mouseenter", () => {
+    navbar.firstElementChild.style.top = "0px";
+  });
+  // 移出
+  navbar.addEventListener("mouseleave", () => {
+    navbar.firstElementChild.style.top = "-100px";
+  });
+
   // 蒙版
   const mask = document.createElement("div");
   mask.classList.add("mask");
@@ -155,7 +163,7 @@ const styles = `
 .nav-list {
   display: flex;
   position: relative;
-  top:0;
+  top:-100px;
   flex: 80%;
   margin-left: 200px;
   margin-right: 200px;

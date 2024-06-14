@@ -144,12 +144,16 @@
 }
 
 .second-text img:nth-child(1) {
+  position: relative;
+  top: 10vh;
   width: 100%;
+  transition: all 1.5s ease;
 }
 .second-text img:nth-child(2) {
   width: 90%;
   position: absolute;
-  top: 8vh;
+  top: 28vh;
+  transition: all 1s ease;
 }
 
 .second-img {
