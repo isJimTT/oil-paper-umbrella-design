@@ -49,3 +49,9 @@ window.addEventListener("scroll", () => {
     element.style.bottom = "0";
   }
 });
+
+function changeUmbrella(imgUrl) {
+  const umbrella = document.querySelector(".umbrella");
+  if (umbrella.src === imgUrl) return;
+  umbrella.src = imgUrl;
+}
