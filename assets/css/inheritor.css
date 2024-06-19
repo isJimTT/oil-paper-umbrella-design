@@ -56,3 +56,21 @@ body {
   z-index: 997;
   cursor: pointer;
 }
+
+.back-btn img {
+  width: 4vw;
+  position: fixed;
+  top: 2vw;
+  left: 1vw;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.video {
+  display: none;
+  position: absolute;
+  width: 70vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

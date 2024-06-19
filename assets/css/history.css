@@ -44,15 +44,17 @@
   z-index: 99999;
 }
 .back-umbrella img {
-  position: sticky;
-  width: 3.5vw;
-  top: 15px;
-  left: 20px;
+  width: 4vw;
+  position: fixed;
+  top: 2vw;
+  left: 1vw;
+  cursor: pointer;
+  z-index: 99999;
 }
 
 .logo img {
   position: fixed;
-  bottom: 25px;
+  bottom: 30px;
   left: 10px;
   z-index: 99999;
 }
@@ -311,7 +313,7 @@
   transition: all 1s;
 }
 /* 媒体查询，做一个简单适配 */
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
   .g-progress {
     width: 600px;
     height: 600px;
@@ -432,7 +434,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh; /* 使父容器高度等于视窗高度 */
-  top: 10vh;
+  top: 15vh;
 }
 
 .story img {

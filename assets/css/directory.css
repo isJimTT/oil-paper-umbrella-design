@@ -57,8 +57,12 @@
 }
 
 .back-umbrella img {
+  width: 4vw;
   position: fixed;
-  z-index: 999;
+  top: 2vw;
+  left: 1vw;
+  cursor: pointer;
+  z-index: 99999;
 }
 
 /* 目录按钮 */
@@ -92,7 +96,7 @@
 .mid-line {
   position: absolute;
   height: 4vh;
-  top: 6vh;
+  top: 5vh;
   left: -1vh;
   width: 100%;
   border-radius: 5vh;
@@ -125,7 +129,7 @@
 }
 .button-cloud img:nth-child(2) {
   width: 40vw;
-  top: -8vh;
+  top: -3vw;
   left: -10vw;
   z-index: 9999;
 }
@@ -159,4 +163,17 @@
   width: 20vw;
   left: 40vw;
   top: 17vh;
+}
+
+.ub {
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

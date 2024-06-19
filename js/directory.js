@@ -12,6 +12,35 @@ backBtn.onclick = () => {
 
 // 跟随鼠标事件
 mainBg.onmousemove = (e) => {
+  const directMouse = e.clientX;
+
+  console.log(directMouse > 0.75 && directMouse < innerWidth);
+
+  if (directMouse > 0 && directMouse < innerWidth * 0.25) {
+    midLines[2].classList.remove("mid-line");
+    midLines[3].classList.remove("mid-line");
+    midLines[1].classList.remove("mid-line");
+    midLines[0].classList.add("mid-line");
+  }
+  if (directMouse > innerWidth * 0.25 && directMouse < innerWidth * 0.5) {
+    midLines[2].classList.remove("mid-line");
+    midLines[3].classList.remove("mid-line");
+    midLines[0].classList.remove("mid-line");
+    midLines[1].classList.add("mid-line");
+  }
+  if (directMouse > innerWidth * 0.5 && directMouse < innerWidth * 0.75) {
+    midLines[0].classList.remove("mid-line");
+    midLines[3].classList.remove("mid-line");
+    midLines[1].classList.remove("mid-line");
+    midLines[2].classList.add("mid-line");
+  }
+  if (directMouse > innerWidth * 0.75 && directMouse < innerWidth) {
+    midLines[2].classList.remove("mid-line");
+    midLines[0].classList.remove("mid-line");
+    midLines[1].classList.remove("mid-line");
+    midLines[3].classList.add("mid-line");
+  }
+
   let x = (e.clientX - eye.offsetLeft) / 3;
   let y = (e.clientY - eye.offsetTop) / 10;
   eye.style.transform = `translateX(${x}px) translateY(${y}px)`;
@@ -22,19 +51,11 @@ mainBg.onmousemove = (e) => {
 directories.forEach((item, index) => {
   item.addEventListener("mouseenter", (e) => {
     directories.forEach((dirItem, index) => {
-      dirItem.style.borderImageSource = "";
-      dirItem.style.border = "none";
       dirItem.style.scale = "1";
       midLines[index].classList.remove("mid-line");
     });
 
     midLines[index].classList.add("mid-line");
-    e.target.style.borderImageSource =
-      "radial-gradient(45% 100%, transparent 0px, transparent 100%, #fff 100%)";
-    e.target.style.borderImageSlice = "10";
-    e.target.style.borderWidth = "3px";
-    e.target.style.borderStyle = "solid";
-    e.target.style.borderImageOutset = "0.1cm";
     e.target.style.scale = "1.1";
   });
 });

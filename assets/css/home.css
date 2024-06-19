@@ -134,6 +134,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  pointer-events: none;
 }
 .cloud-left-top {
   position: absolute;
@@ -207,6 +208,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  pointer-events: none;
 }
 
 .umbrella-left-mid {

@@ -18,7 +18,7 @@ body {
 
 .logo img {
   position: fixed;
-  bottom: 25px;
+  bottom: 30px;
   left: 10px;
   z-index: 99999;
 }
@@ -96,10 +96,9 @@ body {
 }
 
 .back {
-  width: 5vw;
-  z-index: 99;
+  width: 4vw;
   position: fixed;
-  top: 1vw;
+  top: 2vw;
   left: 1vw;
   cursor: pointer;
   z-index: 99999;
@@ -148,7 +147,7 @@ body {
   width: 10vw;
   position: absolute;
   top: 23vw;
-  left: 44.5vw;
+  left: 44.8vw;
 }
 
 .process {
@@ -162,7 +161,7 @@ body {
   font-size: 1.3vw;
   padding-left: 10vw;
   padding-right: 10vw;
-  line-height: 2.2vw;
+  line-height: 3vw;
   letter-spacing: 4px;
   text-indent: 3.2vw;
 }
@@ -220,6 +219,7 @@ video {
   position: absolute;
   left: 30vw;
   top: 50vw;
+  z-index: -99;
 }
 
 .long {
@@ -380,4 +380,40 @@ video {
   width: 4vw;
   left: 48vw;
   bottom: 2vw;
+}
+
+.structure,
+.process {
+  opacity: 0; /* 初始时隐藏元素 */
+  transform: translateX(-100%); /* 初始位置在屏幕左侧外 */
+  transition: opacity 2s, transform 2s; /* 添加过渡效果 */
+}
+
+.structure.visible,
+.process.visible {
+  opacity: 1; /* 可见时显示元素 */
+  transform: translateX(0); /* 滑入至屏幕内 */
+}
+
+.text-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.mask-text {
+  background-color: #1e1c1d;
+  width: 100%;
+  height: 12vw;
+  margin-top: 2vw;
+  position: absolute;
+  animation: moveText 4s ease forwards;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(120%);
+  }
 }

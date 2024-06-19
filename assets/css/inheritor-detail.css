@@ -43,7 +43,7 @@
 
 .logo img {
   position: fixed;
-  bottom: 25px;
+  bottom: 30px;
   left: 10px;
   z-index: 99999;
 }
@@ -133,7 +133,7 @@
 }
 .second {
   overflow: hidden;
-  height: 224.5vh;
+  height: 232.5vh;
 }
 
 .second .second-text {
@@ -173,9 +173,10 @@
 
 .third {
   display: flex;
+  position: relative;
+  top: 100px;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
 }
 
 .third img {

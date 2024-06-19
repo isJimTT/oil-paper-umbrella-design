@@ -113,7 +113,7 @@ function createCustomNavbar() {
   toggleButton.src = "../assets/img/navigate/meau.png";
   toggleButton.classList.add("toggle-button");
   navbar.appendChild(toggleButton);
-  let isNavExpanded = false;
+  // let isNavExpanded = false;
   toggleButton.addEventListener("click", function () {
     if (!isNavExpanded) {
       console.log(navbar.firstElementChild);
@@ -175,6 +175,7 @@ const styles = `
   position: relative;
   cursor: pointer;
   z-index: 999;
+   transition: border-bottom 0.1s ease;
 }
   .nav-list img:hover {
   border-bottom: 2px solid #9e9c9c;
@@ -183,7 +184,7 @@ const styles = `
 
 .toggle-button {
   margin-right: 50px;
-  cursor: pointer;
+  // cursor: pointer;
 }
 
 `;

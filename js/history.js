@@ -84,6 +84,7 @@ function rotateProgress(rotatedDeg, fncScrollTop) {
       currentScrollTop = fncScrollTop;
     } else {
       // 向上滚动
+
       if (fncScrollTop < 500) {
         title[0].style.left = 0;
         title[1].style.left = "17vw";
@@ -113,8 +114,8 @@ async function catchBottom() {
     umbrella.style.left = 0;
     progressWrap.style.left = 0;
   }
-  if (transformX < 2200) {
-    transformX += 20;
+  if (transformX < innerWidth * 1.15) {
+    transformX += 50;
     third.style.left = `-${transformX}px`;
   }
 }
@@ -123,6 +124,7 @@ async function catchBottom() {
 async function leaveBottom() {
   maskStory.style.display = "none";
   mask.style.display = "block";
+  console.log(transformX);
 
   if (transformX >= 0) {
     transformX -= 100;
@@ -131,7 +133,7 @@ async function leaveBottom() {
     titleBottom[1].style.transform = "";
     titleBottom[2].style.transform = "";
   }
-  if (transformX <= 500) {
+  if (transformX <= 200) {
     umbrella.style.left = "50%";
     progressWrap.style.left = "50%";
   }
