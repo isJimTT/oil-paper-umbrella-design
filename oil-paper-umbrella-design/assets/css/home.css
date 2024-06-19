@@ -1,0 +1,284 @@
+:root {
+  --base-unit: 1vw; /* 假设将视口宽度分为100份 */
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+  animation: bgColorChange 2s ease;
+}
+
+/* 黑屏渐显 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  z-index: 999;
+  animation: fadeIn 3s forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* 标题 */
+.title {
+  display: block;
+  position: relative;
+  width: 1027px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  top: -50px;
+  left: 20px;
+  animation: titleChange 2s ease;
+}
+
+.title img {
+  transition: scale linear 0.5s 0s;
+}
+
+.title img:nth-child(1) {
+  width: 52vw;
+  height: 42vh;
+}
+.title img:nth-child(2) {
+  width: 25vw;
+  height: 5vh;
+}
+
+.title img:hover {
+  cursor: pointer;
+  scale: 1.05;
+}
+
+.title .title-top {
+  z-index: 999;
+}
+.title .title-bottom {
+  position: relative;
+  left: 100px;
+}
+.umbrella-title-left {
+  position: absolute;
+  width: 10vw;
+  top: 33vh;
+  left: -4vw;
+  border-radius: 1000px;
+
+  transition: transform 2s ease-in-out;
+}
+
+.umbrella-title-right {
+  position: absolute;
+  width: 5vw;
+  top: 63vh;
+  right: -1vw;
+  border-radius: 1000px;
+  transition: transform 2s ease-in-out;
+}
+.shanks-left {
+  animation: animated-border-left 5s infinite;
+}
+.shanks-right {
+  animation: animated-border-right 3s infinite;
+}
+
+@keyframes animated-border-left {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 300px rgba(255, 255, 255, 0);
+  }
+}
+@keyframes animated-border-right {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes titleChange {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+/* 云朵 */
+.cloud-wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+.cloud-left-top {
+  position: absolute;
+  display: block;
+  width: 40vw;
+  height: 90vh;
+  top: -50vh;
+  left: -10vw;
+}
+.cloud-mid-top {
+  position: absolute;
+  width: 55vw;
+  height: 75vh;
+  top: -32vh;
+  left: 25vw;
+}
+.cloud-mid-bottom {
+  position: absolute;
+  width: 55vw;
+  height: 75vh;
+  bottom: -35vh;
+  left: 25vw;
+}
+.cloud-mid-right {
+  position: absolute;
+  width: 50vw;
+  height: 90vh;
+  bottom: -37vh;
+  left: 70vw;
+}
+
+.cloud-left-top,
+.cloud-mid-bottom {
+  animation: cloudMoveLeft 5s infinite alternate;
+}
+
+.cloud-mid-right,
+.cloud-mid-top {
+  animation: cloudMoveRight 5s infinite alternate;
+}
+
+@keyframes cloudMoveLeft {
+  0% {
+    transform: translate(-4px, -4px);
+  }
+  50% {
+    transform: translate(4px, 4px);
+  }
+  100% {
+    transform: translate(-4px, -4px);
+  }
+}
+
+@keyframes cloudMoveRight {
+  0% {
+    transform: translate(5px, 5px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(5px, 5px);
+  }
+}
+
+/* 伞 */
+.umbrella-wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.umbrella-left-mid {
+  position: absolute;
+  scale: 0.9;
+  width: 40vw;
+  top: 10vh;
+  left: -20vw;
+}
+
+.umbrella-left-bottom {
+  position: absolute;
+  scale: 1.12;
+  width: 50vw;
+  top: 45vh;
+  left: -13vw;
+}
+
+.umbrella-right-mid {
+  position: absolute;
+  scale: 0.9;
+  width: 50vw;
+  top: -15vh;
+  right: -23vw;
+}
+
+.umbrella-right-top {
+  position: absolute;
+  scale: 0.9;
+  width: 50vw;
+  top: -47vh;
+  right: -14vw;
+}
+
+@keyframes umbrellaRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes umbrellaSpreadLeft {
+  0% {
+    transform: translate(700px, -300px) scale(1) rotate(0);
+    z-index: 998;
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(360deg);
+    z-index: 998;
+  }
+}
+
+@keyframes umbrellaSpreadRight {
+  0% {
+    transform: translate(-800px, 300px) scale(1) rotate(0);
+    z-index: 998;
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(360deg);
+    z-index: 998;
+  }
+}
+
+.umbrella-left-mid,
+.umbrella-left-bottom {
+  animation: umbrellaSpreadLeft 2s, umbrellaRotate 20s infinite 2s;
+}
+.umbrella-right-mid,
+.umbrella-right-top {
+  animation: umbrellaSpreadRight 2s, umbrellaRotate 20s infinite 2s;
+}

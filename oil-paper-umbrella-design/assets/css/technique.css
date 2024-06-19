@@ -1,0 +1,419 @@
+body {
+  background-color: #1e1c1d;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  background-color: #818181;
+  z-index: 99999;
+}
+
+.logo img {
+  position: fixed;
+  bottom: 30px;
+  left: 10px;
+  z-index: 99999;
+}
+
+.slide img {
+  position: fixed;
+  bottom: 3vh;
+  left: 48vw;
+  width: 4vw;
+  z-index: 9999;
+  transition: all 1.5s ease;
+  animation: animated-border 1.5s infinite;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+@keyframes animated-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    transform: translateY(-10px);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    transform: translateY(0px);
+  }
+}
+
+.main1 {
+  height: 52vw;
+  overflow: hidden;
+}
+
+.main3 {
+  position: relative;
+}
+
+/* 黑屏渐显 */
+.overlay {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  z-index: 99999;
+  animation: fadeIn 1.5s forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.sun {
+  width: 99.5vw;
+  position: absolute;
+  top: -37vw;
+  left: -0.3vw;
+  animation: sunRotate 60s linear infinite;
+}
+
+.word {
+  width: 31.8vw;
+  position: absolute;
+  left: 33.5vw;
+  top: -3.1vw;
+  animation: wordRotate 60s linear infinite;
+}
+
+.back {
+  width: 4vw;
+  position: fixed;
+  top: 2vw;
+  left: 1vw;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.mountain {
+  width: 24vw;
+  position: absolute;
+  top: 13.5vw;
+  left: 38vw;
+}
+
+.cloud1 {
+  width: 6vw;
+  position: absolute;
+  top: 16vw;
+  left: 26vw;
+  animation: cloudMoveLeft 5s infinite alternate;
+}
+
+.cloud2 {
+  width: 13vw;
+  position: absolute;
+  top: 14.5vw;
+  left: 30vw;
+  animation: cloudMoveRight 5s infinite alternate;
+}
+
+.cloud3 {
+  width: 20vw;
+  position: absolute;
+  top: 16.8vw;
+  left: 40vw;
+  animation: cloudMoveLeft 5s infinite alternate;
+}
+
+.cloud4 {
+  width: 14vw;
+  position: absolute;
+  top: 15.1vw;
+  left: 58vw;
+  animation: cloudMoveRight 5s infinite alternate;
+}
+
+.title {
+  width: 10vw;
+  position: absolute;
+  top: 23vw;
+  left: 44.8vw;
+}
+
+.process {
+  width: 50vw;
+  margin-top: 10vw;
+  margin-left: 8vw;
+}
+
+.detail {
+  color: #fce9bc;
+  font-size: 1.3vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  line-height: 3vw;
+  letter-spacing: 4px;
+  text-indent: 3.2vw;
+}
+
+video {
+  width: 80vw;
+  margin-left: 10vw;
+  /* object-fit: contain; */
+}
+
+.line {
+  width: 82vw;
+  position: relative;
+  left: 10vw;
+  top: -5vw;
+}
+
+.swiper {
+  width: 99vw;
+  height: 15vw;
+  margin-top: 5vw;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3vw;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.structure {
+  width: 50vw;
+  margin-top: 10vw;
+  margin-left: 8vw;
+}
+
+.umbrella {
+  /* opacity: 0.6; */
+  width: 99vw;
+  /* width: 120vw;
+  margin-left: -10.5vw; */
+}
+
+.luzhou {
+  width: 40vw;
+  position: absolute;
+  left: 30vw;
+  top: 50vw;
+  z-index: -99;
+}
+
+.long {
+  width: 40vw;
+  position: absolute;
+  top: 29vw;
+  left: 10.8vw;
+  transition: transform 0.3s ease;
+}
+.long:hover {
+  transform: scale(1.1) translateX(-1.7vw);
+}
+
+.short {
+  width: 40vw;
+  position: absolute;
+  top: 39vw;
+  left: 49.1vw;
+  transition: transform 0.3s ease;
+}
+.short:hover {
+  transform: scale(1.1) translateX(1.7vw);
+}
+
+.jump {
+  width: 40vw;
+  position: absolute;
+  top: 53vw;
+  left: 49vw;
+  transition: transform 0.3s ease;
+}
+.jump:hover {
+  transform: scale(1.1) translateX(1.7vw) translateY(1.4vw);
+}
+
+.bing {
+  width: 40vw;
+  position: absolute;
+  top: 73vw;
+  left: 10.7vw;
+  transition: transform 0.3s ease;
+}
+.bing:hover {
+  transform: scale(1.1) translateX(-1.7vw) translateY(-1.4vw);
+}
+
+.drill {
+  width: 40vw;
+  position: absolute;
+  top: 117vw;
+  left: 49.2vw;
+  transition: transform 0.3s ease;
+}
+.drill:hover {
+  transform: scale(1.1) translateX(1.7vw);
+}
+
+.footer {
+  height: 20vw;
+  overflow: hidden;
+}
+
+.ub {
+  width: 50vw;
+  left: 25vw;
+  bottom: 2vw;
+  position: relative;
+  animation: wordRotate 30s linear infinite;
+}
+
+.fc1 {
+  width: 45vw;
+  position: relative;
+  left: -57vw;
+  bottom: 16vw;
+  animation: cloudMoveLeft 5s infinite alternate;
+}
+
+.fc2 {
+  width: 45vw;
+  left: 1vw;
+  bottom: 54.6vw;
+  position: relative;
+  animation: cloudMoveRight 5s infinite alternate;
+}
+
+.fc3 {
+  position: relative;
+  width: 45vw;
+  left: -1vw;
+  bottom: 52vw;
+  z-index: 9;
+  animation: cloudMoveLeft 6s infinite alternate;
+}
+
+.fc4 {
+  width: 48vw;
+  bottom: 95vw;
+  left: 58vw;
+  position: relative;
+  animation: cloudMoveRight 5s infinite alternate;
+}
+
+@keyframes cloudMoveLeft {
+  0% {
+    transform: translate(-0.3vw, -0.3vw);
+  }
+  50% {
+    transform: translate(0.3vw, 0.3vw);
+  }
+  100% {
+    transform: translate(-0.3vw, -0.3vw);
+  }
+}
+
+@keyframes cloudMoveRight {
+  0% {
+    transform: translate(0.3vw, 0.3vw);
+  }
+  50% {
+    transform: translate(-0.3vw, -0.3vw);
+  }
+  100% {
+    transform: translate(0.3vw, 0.3vw);
+  }
+}
+
+@keyframes sunRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wordRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.mengban {
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  width: 99vw;
+  height: 7vw;
+  background: linear-gradient(to top, black, transparent);
+  transition: bottom 2s;
+}
+
+.down {
+  position: absolute;
+  width: 4vw;
+  left: 48vw;
+  bottom: 2vw;
+}
+
+.structure,
+.process {
+  opacity: 0; /* 初始时隐藏元素 */
+  transform: translateX(-100%); /* 初始位置在屏幕左侧外 */
+  transition: opacity 2s, transform 2s; /* 添加过渡效果 */
+}
+
+.structure.visible,
+.process.visible {
+  opacity: 1; /* 可见时显示元素 */
+  transform: translateX(0); /* 滑入至屏幕内 */
+}
+
+.text-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.mask-text {
+  background-color: #1e1c1d;
+  width: 100%;
+  height: 12vw;
+  margin-top: 2vw;
+  position: absolute;
+  animation: moveText 4s ease forwards;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(120%);
+  }
+}
